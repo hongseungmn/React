@@ -24,14 +24,14 @@ function App() {
   return <>
     <div className='container'>
       <h1 className="box">App(Import Style CSS)</h1>
-      <Hello/>
+      {/* <Hello/> */}
        
       <h2>useState훅 함수</h2>
       컴포넌트가 동일하더라도 state는 독립적이다
       <UseState1/>
       <UseState1/>
-      <UseState2/>
-      <UseState3/>
+      {/* <UseState2/>
+      <UseState3/> */}
       {/*
       <h2>useEffect훅 함수</h2>
       <UseEffect1/>
@@ -53,8 +53,8 @@ function App() {
 {/*}
 <h2>useCallback훅 함수</h2>
 <UseCallback_/>*/}
-  <h2>커스텀 훅 함수</h2>
-  <UseCustomHooks/>
+  {/* <h2>커스텀 훅 함수</h2>
+  <UseCustomHooks/> */}
     </div>
   </>
 }
