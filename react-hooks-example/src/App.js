@@ -31,11 +31,11 @@ function App() {
       {/* <UseState1/>
       <UseState1/> */}
       {/* <UseState2/> */}
-      <UseState3/>
-      {/*
+      {/* <UseState3/> */}
+      
       <h2>useEffect훅 함수</h2>
       <UseEffect1/>
-    <UseEffect2/>*/}
+      <UseEffect2/>
     {/*
       <h2>useRef훅 함수</h2>
   <UserRef_/>*/}
