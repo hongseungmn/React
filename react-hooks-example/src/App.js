@@ -26,8 +26,8 @@ function App() {
       <h1 className="box">App(Import Style CSS)</h1>
       {/* <Hello/> */}
        
-      <h2>useState훅 함수</h2>
-      컴포넌트가 동일하더라도 state는 독립적이다
+      {/* <h2>useState훅 함수</h2>
+      컴포넌트가 동일하더라도 state는 독립적이다 */}
       {/* <UseState1/>
       <UseState1/> */}
       {/* <UseState2/> */}
