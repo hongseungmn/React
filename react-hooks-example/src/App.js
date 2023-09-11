@@ -28,10 +28,10 @@ function App() {
        
       <h2>useState훅 함수</h2>
       컴포넌트가 동일하더라도 state는 독립적이다
-      <UseState1/>
-      <UseState1/>
-      {/* <UseState2/>
-      <UseState3/> */}
+      {/* <UseState1/>
+      <UseState1/> */}
+      <UseState2/>
+      {/* <UseState3/> */}
       {/*
       <h2>useEffect훅 함수</h2>
       <UseEffect1/>
