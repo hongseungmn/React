@@ -33,17 +33,17 @@ function App() {
       {/* <UseState2/> */}
       {/* <UseState3/> */}
       
-      <h2>useEffect훅 함수</h2>
+      {/* <h2>useEffect훅 함수</h2>
       <UseEffect1/>
-      <UseEffect2/>
-    {/*
-      <h2>useRef훅 함수</h2>
-  <UserRef_/>*/}
-  {/*}
+      <UseEffect2/> */}
+    
+      {/* <h2>useRef훅 함수</h2>
+  <UserRef_/> */}
+  
   <h2>useReducer훅 함수</h2>
   <UseReducer1/>
   <hr/>
-    <UseReducer2/>*/} 
+    <UseReducer2/>
     {/*
     <h2>useContext훅 함수</h2>
   <UseContext_/>*/}
