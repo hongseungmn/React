@@ -1,4 +1,3 @@
-import '../style/Header.css'
 import Menubar from "./Menubar";
 
 

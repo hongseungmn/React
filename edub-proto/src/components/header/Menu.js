@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import '../style/Menubar.css'
 
 
 const MenuListComponent = ({ items }) => {

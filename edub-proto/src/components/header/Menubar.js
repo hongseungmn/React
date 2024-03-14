@@ -1,4 +1,3 @@
-import '../style/Menubar.css'
 import Menu from "./Menu";
 
 const menulist = [
