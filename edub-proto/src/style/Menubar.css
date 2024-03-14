@@ -1,0 +1,71 @@
+#menubar {
+  /* display: inline-flex;
+  align-items: center; */
+  /* margin-left: 20px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1em 0 1em;
+}
+
+.menubar-button {
+  /* padding: 9px 8px; */
+  color: #ccc;
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0.5em;
+  position: relative;
+}
+.menubar-button:hover {
+  background-color: #121212;
+  border-radius: 6px;
+}
+
+.menubar-button:nth-child(7) {
+  display: flex;
+  align-items: center;
+}
+
+.menubar-button:nth-child(7) img {
+  width: 16px;
+  height: 16px;
+  margin: 0 3px 0 0;
+}
+
+.menubar-list {
+  width: max-content;
+  height: max-content;
+  background-color: #ff3d98;
+  position: absolute;
+  top: 32px;
+  left: -1px;
+  background-color: #121212;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  border: 1px solid #3c3c3c;
+  z-index: 10000;
+  padding: 6px 0;
+  /* display: none; */
+  cursor: default;
+}
+
+.menubar-list .menubar-item {
+  color: #ccc;
+  cursor: pointer;
+  /* padding: 4px 7em 4px 28px; */
+  /* width: 100%; */
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.menubar-list .menubar-item:hover {
+  background-color: #474747;
+}
+
+.menubar-border {
+  border-top: 1px solid #3c3c3c;
+  margin: 6px 0;
+  padding: 0 !important;
+}

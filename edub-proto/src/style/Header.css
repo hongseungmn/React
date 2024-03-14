@@ -1,0 +1,35 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 5px 0;
+  height: 40px;
+  background: #3c3c3c;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.header_l {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  margin: 1px 0 0 7px;
+}
+.logo h4 {
+  margin-left: 7px;
+  padding-top: 7px;
+  color: #ccc;
+}
+.logo_img {
+  cursor: pointer;
+}
+
+.logo_img img {
+  width: 100%;
+  height: 100%;
+}
