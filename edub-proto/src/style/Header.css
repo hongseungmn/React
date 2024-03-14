@@ -15,10 +15,16 @@
 .header_l {
   display: flex;
 }
+.header_r {
+  display: flex;
+}
 
 .logo {
   display: flex;
   margin: 1px 0 0 7px;
+  align-items: center;
+  width: 15%;
+
 }
 .logo h4 {
   margin-left: 7px;
@@ -32,4 +38,13 @@
 .logo_img img {
   width: 100%;
   height: 100%;
+}
+
+.top-right-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: max-content;
+  color: #ccc;
 }
