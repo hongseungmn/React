@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import '../style/Menubar.css'
 
 
@@ -10,11 +11,22 @@ const MenuListComponent = ({ items }) => {
   );
 };
 
+
+
 export default function Menu({name, list}) {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  }
   return (<>
-  <div className="menubar-button">
+  <div className="menubar-button" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
     {name}
-    <div  className='menubar-list'>
+    <div  className='menubar-list' style={ {display : isHovering ? "":"none"}}>
       <MenuListComponent items={list}/>
     </div>
   </div>
