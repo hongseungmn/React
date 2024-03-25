@@ -1,6 +1,5 @@
 import Split from 'react-split';
 
-
 const ComponentA = () => {
   return (
     <div style={{ border: '1px solid red' }}>
