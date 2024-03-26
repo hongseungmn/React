@@ -18,7 +18,7 @@ const ComponentB = () => {
 function C2() {
   return (
     <div>
-      <Split class="comp2 intterWrap" sizes={[50, 50]} direction="vertical">
+      <Split className="comp2 intterWrap" sizes={[50, 50]} direction="vertical">
         <ComponentA />
         <ComponentB />
       </Split>

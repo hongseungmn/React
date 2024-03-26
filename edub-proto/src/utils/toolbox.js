@@ -1,4 +1,4 @@
-import { IO } from "./Io";
+import { IO } from "./js/IO"
 
 export let MY_TOOLBOX =
   '<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" class="toolbox" style="display:none">';

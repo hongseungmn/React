@@ -17,8 +17,8 @@ export default function Header() {
           <span className="material-symbols-outlined">library_add</span>
           라이브러리 추가
         </div>
-        <div className='top-right-btn'><span class="material-icons">dark_mode</span></div>
-        <div className='top-right-btn'><span class="material-icons">light_mode</span></div>
+        <div className='top-right-btn'><span className="material-icons">dark_mode</span></div>
+        <div className='top-right-btn'><span className="material-icons">light_mode</span></div>
       </div>
     </div>
   </>)

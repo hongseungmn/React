@@ -18,19 +18,10 @@ const MyBlocklyEditor = () => {
 };
 
 
-function C1() {
-  return (
-  <>
-    <div class="comp">
-      <MyBlocklyEditor/>
-    </div>
-  </>
-  );
-}
 export default function Container() {
   return (<>
     <Split
-    class="wrap"
+    className="wrap"
     sizes={[70, 30]}
     minSize={100}
     expandToMin={false}
