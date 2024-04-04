@@ -11,10 +11,13 @@
   cursor: ns-resize;
 }
 .comp {
-  /* background: red;
-  color: white;
+  background: red;
+  /* color: white;
   height: 1000px; */
   /* display: inline-block; */
+  display:block;
+	width:100%;
+	height:auto;
 }
 .comp2 {
   background: green;
