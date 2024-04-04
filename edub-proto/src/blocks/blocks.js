@@ -1,5 +1,5 @@
 import Blockly from 'blockly';
-import {pythonGenerator} from 'blockly/python';
+import {pythonGenerator,Order} from 'blockly/python';
 
 // 코드 - 파이썬 부분 코드(만능)
 Blockly.Blocks["indata"] = {
@@ -17,11 +17,11 @@ Blockly.Blocks["indata"] = {
 };
 
 // 코드 - 파이썬 부분 코드(만능)
-pythonGenerator.forBlock["indata"] = function (block) {
+pythonGenerator.forBlock["indata"] = function (block,generator) {
     var text_modified_col = block.getFieldValue("indata1");
     // TODO: Assemble Python into code variable.
     var code = text_modified_col;
-    return [code, Blockly.Python.ORDER_ATOMIC];
+    return [code, Order.NONE];
 };
 
 
@@ -30,7 +30,7 @@ Blockly.Blocks["io_bk1"] = {
     init: function () {
     this.appendDummyInput()
         .appendField("LANGUAGE.IO.print.NAME").appendField('(');
-    this.appendValueInput("content1").setCheck(null);
+    this.appendValueInput("content1").setCheck("String");
     this.appendDummyInput().appendField(")");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
@@ -39,15 +39,14 @@ Blockly.Blocks["io_bk1"] = {
     this.setTooltip("");
     this.setHelpUrl("");
     },
+
+
 };
-pythonGenerator.forBlock["io_bk1"] = function (block) {
-    var value_v1 = Blockly.Python.valueToCode(
-    block,
-    "content1",
-    Blockly.Python.ORDER_ATOMIC
-    );
-    var code = `print(${value_v1})\n`;
-    return code;
+pythonGenerator.forBlock["io_bk1"] = function (block,generator) {
+  // Collect argument strings.
+    var fieldValue = block.getFieldValue('content1');
+    var innerCode = generator.valueToCode(block, 'content1', Order.ATOMIC);
+    return 'my code string';
 };
 
 //io_bk2 - print(var) - 결과 출력
@@ -66,11 +65,11 @@ Blockly.Blocks["io_bk2"] = {
     },
 };
 
-pythonGenerator.forBlock["io_bk2"] = function (block) {
-    var value_content = Blockly.Python.valueToCode(
+pythonGenerator.forBlock["io_bk2"] = function (block,generator) {
+    var value_content = generator.valueToCode(
     block,
     "content",
-    Blockly.Python.ORDER_ATOMIC
+    Order.ATOMIC
     );
     // TODO: Assemble Python into code variable.
     var code = "print(" + value_content + ")\n";
@@ -95,16 +94,16 @@ Blockly.Blocks["io_bk3"] = {
     },
 };
 // print("메시지", var) - 결과 출력 text + var
-pythonGenerator.forBlock["io_bk3"] = function (block) {
-    var value_content1 = Blockly.Python.valueToCode(
+pythonGenerator.forBlock["io_bk3"] = function (block,generator) {
+    var value_content1 = generator.valueToCode(
     block,
     "content1",
-    Blockly.Python.ORDER_ATOMIC
+    Order.ATOMIC
     );
-    var value_content2 = Blockly.Python.valueToCode(
+    var value_content2 = generator.valueToCode(
     block,
     "content2",
-    Blockly.Python.ORDER_ATOMIC
+    Order.ATOMIC
     );
     // TODO: Assemble Python into code variable.
     var code = `print(${value_content1}, ${value_content2})\n`;
@@ -175,12 +174,12 @@ Blockly.Blocks['io_bk4'] = {
     }
 };
 
-pythonGenerator.forBlock['io_bk4'] = function(block) {
+pythonGenerator.forBlock['io_bk4'] = function(block,generator) {
     var dropdown = block.getFieldValue('NAME');
-    var value_v1 = Blockly.Python.valueToCode(block, 'v1', Blockly.Python.ORDER_ATOMIC);
+    var value_v1 = generator.valueToCode(block,generator, 'v1', Order.ATOMIC);
     var code = `f"${value_v1}"`;
 
-    return [code, Blockly.Python.ORDER_ATOMIC];
+    return [code, Order.ATOMIC];
 };
 
 
@@ -199,16 +198,16 @@ Blockly.Blocks["io_bk5"] = {
     },
 };
 // input("메시지") - 형변환 + 데이터입력
-pythonGenerator.forBlock["io_bk5"] = function (block) {
-    var value_content1 = Blockly.Python.valueToCode(
+pythonGenerator.forBlock["io_bk5"] = function (block,generator) {
+    var value_content1 = generator.valueToCode(
     block,
     "content1",
-    Blockly.Python.ORDER_ATOMIC
+    Order.ATOMIC
     );
     // TODO: Assemble Python into code variable.
     var code = "input(" + value_content1 + ")";
     // TODO: Change ORDER_NONE to the correct strength.
-    return [code, Blockly.Python.ORDER_ATOMIC];
+    return code
 };
 
 Blockly.Blocks['io_bk6'] = {
@@ -227,9 +226,9 @@ Blockly.Blocks['io_bk6'] = {
     }
 };
 
-pythonGenerator.forBlock['io_bk6'] = function(block) {
-    var value_v1 = Blockly.Python.valueToCode(block, 'v1', Blockly.Python.ORDER_ATOMIC);
-    var statements_name = Blockly.Python.statementToCode(block, 'NAME');
+pythonGenerator.forBlock['io_bk6'] = function(block,generator) {
+    var value_v1 = generator.valueToCode(block,generator, 'v1', Order.ATOMIC);
+    var statements_name = generator.statementToCode(block,generator, 'NAME');
     var code = `# ${value_v1}\n${statements_name}`;
     return code;
 }
@@ -254,9 +253,9 @@ Blockly.Blocks['import_tab'] = {
     },
 };
 
-pythonGenerator.forBlock["import_tab"] = function (block) {
+pythonGenerator.forBlock["import_tab"] = function (block,generator) {
     var dropdown_name = block.getFieldValue('NAME');
-    var value_v1 = Blockly.Python.valueToCode(block, 'v1', Blockly.Python.ORDER_ATOMIC);
+    var value_v1 = generator.valueToCode(block,generator, 'v1', Order.ATOMIC);
     var code = `from ${dropdown_name} import ${value_v1}\n`
     return code;
 };

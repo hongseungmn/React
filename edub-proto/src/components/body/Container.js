@@ -3,18 +3,18 @@ import C2 from './Cont_l';
 import { BlocklyWorkspace } from 'react-blockly';
 import "../../blocks/blocks.js";
 import Blockly from 'blockly';
-import {javascriptGenerator} from 'blockly/javascript';
+import {pythonGenerator} from 'blockly/python';
 import { useState } from 'react';
 import { MY_TOOLBOX } from '../../utils/toolbox';
 
 const MyBlocklyEditor = () => {
   const [xml, setXml] = useState();
-  //const [javascriptCode, setJavascriptCode] = useState("");
-  console.log("myBlocklyEditor 리 렌더링");
+  const [pythonCode, setPythonCode] = useState("");
+  
 
   function workspaceDidChange(workspace) {
-    //const code = Blockly.JavaScript.workspaceToCode(workspace);
-    //setJavascriptCode(code);
+    const code = pythonGenerator.workspaceToCode();
+    setPythonCode(code);
   }
 
   return (
