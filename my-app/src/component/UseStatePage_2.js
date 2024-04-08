@@ -8,7 +8,7 @@ React 문서에 따르면, 이렇게 두 번 호출되는 것은 버그가 아�
 - Strict Mode
 Strict Mode는 어플리케이션 내의 잠재적인 문제를 알아내기 위한 도구이다.
 이 모드는 개발모드에서만 활성화되므로, 프로덕션 빌드에는 영향을 끼치지 않는다.
-
+asldkfjasldfjalkkdafj
 */
 // export default function UseStatePage_2() {
 // 	const [names, setNames] = useState(["둘리","짱구"]); 
