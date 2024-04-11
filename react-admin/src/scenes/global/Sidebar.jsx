@@ -5,7 +5,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 import {Link} from "react-router-dom";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
+import CameraOutlinedIcon from "@mui/icons-material/CameraOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
@@ -16,6 +16,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import FileCopyOutlinedIcon from "@mui/icons-material/FileCopyOutlined"
 
 const Item = ({ title, to, icon, selected, setSelected}) => {
   const theme = useTheme();
@@ -97,7 +98,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.png`}
+                  src={`../../assets/user1.png`}
                   style={{ cousor: "pointer", borderRadius: "50%"}}
                 />
               </Box>
@@ -109,13 +110,13 @@ const Sidebar = () => {
                   fontWeight="bold" 
                   sx={{m: "10px 0 0 0"}}
                 >
-                  Ed Roh
+                  호수장
                 </Typography>
                 <Typography
                   variant="h6" 
                   color={colors.greenAccent[500]}
                 >
-                  VP Fancy Admin
+                  sem50000@naver.com
                 </Typography>
               </Box>
             </Box>
@@ -134,18 +135,18 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px"}}
             >
-              Data
+              Camera
             </Typography>
             <Item 
-              title="Manage Team"
+              title="Manage Camera"
               to="/team"
-              icon={<PeopleOutlinedIcon/>}
+              icon={<CameraOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
             <Item 
-              title="Contects Information"
-              to="/contacts"
+              title="Camera Setting"
+              to="/form"
               icon={<ContactsOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
@@ -162,12 +163,12 @@ const Sidebar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px"}}
             >
-              Pages
+              Detect
             </Typography>
             <Item 
-              title="Profile Form"
-              to="/form"
-              icon={<PersonOutlinedIcon/>}
+              title="Detected File"
+              to="/contacts"
+              icon={<FileCopyOutlinedIcon/>}
               selected={selected}
               setSelected={setSelected}
             />
