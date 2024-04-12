@@ -11,11 +11,10 @@ const VideoView = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box height="60vh" sx={{m: 2}}>
+    <Box sx={{m: 2}}>
       <Image
-        
-        src="https://picsum.photos/id/674/2000"
-        fit="cover"
+        src="../../assets/user1.png"
+        fit="scale-down"
         duration={3000}
         easing= "cubic-bezier(0.7, 0, 0.6, 1)"
         showLoading= { false }

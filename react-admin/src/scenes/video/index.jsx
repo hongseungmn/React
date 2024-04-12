@@ -4,9 +4,7 @@ import { Box } from "@mui/material";
 
 const Video = () => {
   return (
-    <Box>
-      <VideoView/>
-    </Box>
+    <VideoView/>
   )
 }
 
