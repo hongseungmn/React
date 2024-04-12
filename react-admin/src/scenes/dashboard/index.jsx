@@ -65,7 +65,7 @@ const Dashboard = () => {
                 fontWeight="600"
                 color={colors.grey[100]}
               >
-                Revenue Generated
+                카메라 라이브
               </Typography>
               <Typography
                 variant="h3"
@@ -141,7 +141,7 @@ const Dashboard = () => {
             p="15px"
           >
             <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-              Recent Transactions
+            최근 감지 내역
             </Typography>
           </Box>
           {mockTransactions.map((transaction, i) => (

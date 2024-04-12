@@ -18,9 +18,9 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import FileCopyOutlinedIcon from "@mui/icons-material/FileCopyOutlined"
 
-const Item = ({ title, to, icon, selected, setSelected}) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+const Item = ({ title, to, icon, selected, setSelected}) => { 
+  const theme = useTheme(); 
+  const colors = tokens(theme.palette.mode); 
   
   return (
     <MenuItem 

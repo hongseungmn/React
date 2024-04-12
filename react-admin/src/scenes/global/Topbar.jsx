@@ -16,10 +16,11 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box display="flex" justifyContent="space-between" p={2}>
+    <Box display="flex" justifyContent="flex-end" p={2}>
       {/* SEARCH BAR */}
       <Box 
-        display="flex" 
+        display="flex"
+        
         backgroundColor={colors.primary[400]} 
         borderRadius="3px"
       >
