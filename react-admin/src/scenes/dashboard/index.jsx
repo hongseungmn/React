@@ -8,10 +8,11 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
-import GeographyChart from "../../components/GeographyChart";
+// import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import Video from "../video";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -68,11 +69,11 @@ const Dashboard = () => {
                 카메라 라이브
               </Typography>
               <Typography
-                variant="h3"
+                variant="h4"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
               >
-                $59,342.32
+                공사현장 1
               </Typography>
             </Box>
             <Box>
@@ -84,7 +85,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box height="250px" m="-20px 0 0 0">
-            <LineChart isDashboard={true} />
+            <Video/>
           </Box>
         </Box>
         <Box
@@ -234,7 +235,7 @@ const Dashboard = () => {
             Geography Based Traffic
           </Typography>
           <Box height="200px">
-            <GeographyChart isDashboard={true} />
+            {/* <GeographyChart isDashboard={true} /> */}
           </Box>
         </Box>
       </Box>
