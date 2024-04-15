@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
   <Box m="20px">
-    <Header title="CREATE USER" subtitle="Create a New User Profile"/>
+    <Header title="Camera Setting" subtitle="Setting the Camera"/>
     <Formik
       onSubmit={handleFormSubmit}
       initialValues={initialValues}
