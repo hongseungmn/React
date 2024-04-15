@@ -14,8 +14,9 @@ const VideoView = () => {
     <Box sx={{m: 2}}>
       <Image
         src="../../assets/user1.png"
-        fit="scale-down"
+        fit="contain"
         duration={3000}
+        height="40vh"
         easing= "cubic-bezier(0.7, 0, 0.6, 1)"
         showLoading= { false }
         errorIcon={ true }

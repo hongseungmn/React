@@ -91,7 +91,7 @@ const Dashboard = () => {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Video/>
+            <Video />
           </Box>
         </Box>
         <Box
@@ -192,7 +192,7 @@ const Dashboard = () => {
           p="30px"
         >
           <Typography variant="h5" fontWeight="600">
-            Campaign
+            검출 비율
           </Typography>
           <Box
             display="flex"
@@ -206,7 +206,7 @@ const Dashboard = () => {
               color={colors.greenAccent[500]}
               sx={{ mt: "15px" }}
             >
-              $48,352 revenue generated
+              현재 총 검출된 인원은 10명입니다
             </Typography>
             <Typography>Includes extra misc expenditures and costs</Typography>
           </Box>
@@ -221,10 +221,10 @@ const Dashboard = () => {
             fontWeight="600"
             sx={{ padding: "30px 30px 0 30px" }}
           >
-            Sales Quantity
+            검출 통계
           </Typography>
           <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
+            <LineChart isDashboard={true} />
           </Box>
         </Box>
         <Box
