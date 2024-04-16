@@ -11,7 +11,7 @@ const MyBlocklyEditor = ({workspaceDidChange, setXml,xml}) => {
 
   return (
     <BlocklyWorkspace
-      className="comp" // you can use whatever classes are appropriate for your app's CSS
+      className="comp"
       toolboxConfiguration={MY_TOOLBOX} // this must be a JSON toolbox definition
       initialXml={xml}
       onXmlChange={setXml}
