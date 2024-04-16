@@ -7,15 +7,7 @@ import {pythonGenerator} from 'blockly/python';
 import { useState } from 'react';
 import { MY_TOOLBOX } from '../../utils/toolbox';
 
-const MyBlocklyEditor = () => {
-  const [xml, setXml] = useState();
-  const [pythonCode, setPythonCode] = useState("");
-  
-
-  function workspaceDidChange(workspace) {
-    const code = pythonGenerator.workspaceToCode();
-    setPythonCode(code);
-  }
+const MyBlocklyEditor = ({workspaceDidChange, setXml,xml}) => {
 
   return (
     <BlocklyWorkspace
@@ -53,6 +45,15 @@ const MyBlocklyEditor = () => {
 export default function Container() {
   const [sizes, setSizes] = useState([70, 30]);
 
+  const [xml, setXml] = useState();
+  const [pythonCode, setPythonCode] = useState("");
+  
+
+  function workspaceDidChange(workspace) {
+    const code = pythonGenerator.workspaceToCode();
+    setPythonCode(code);
+  }
+
   const handleDragEnd = (newSizes) => {
     setSizes(newSizes);
   };
@@ -70,8 +71,8 @@ export default function Container() {
     cursor="col-resize"
     onDragEnd={handleDragEnd}
   >
-    <MyBlocklyEditor />
-    <C2 />
+    <MyBlocklyEditor workspaceDidChange={workspaceDidChange} setXml={setXml} xml={xml} />
+    <C2 code={pythonCode}/>
   </Split>
   </>)
 }

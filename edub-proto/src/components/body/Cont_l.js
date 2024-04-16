@@ -1,12 +1,9 @@
 import Split from 'react-split';
+import Editor from '@monaco-editor/react';
+import { useEffect } from 'react';
+import '@blockly/toolbox-search';
 
-const ComponentA = () => {
-  return (
-    <div style={{ border: '1px solid red' }}>
-      <h1>Component A</h1>
-    </div>
-  );
-};
+
 const ComponentB = () => {
   return (
     <div style={{ border: '1px solid red' }}>
@@ -15,11 +12,32 @@ const ComponentB = () => {
   );
 };
 
-function C2() {
+function C2({code}) {
+  // useEffect(() => {
+  //   console.log('code',code);
+    
+
+  // },[code])
   return (
+    //처음에 렌더링은 한 후 useEffect를 통해 코드 부분만 바꿀 수 있을까 setValue 나 그런걸로
     <div>
       <Split className="comp2 intterWrap" sizes={[50, 50]} direction="vertical">
-        <ComponentA />
+        <Editor 
+          height='100%'
+          language='python'
+          theme='tomorrow'
+          value={code}
+          options={{
+            fontSize: 15,
+            minimap: { enabled: false },
+            scrollbar: {
+              vertical: 'auto',
+              horizontal: 'auto'
+            },
+            scrollBeyondLastLine: false,
+            automaticLayout: true
+          }}
+        />
         <ComponentB />
       </Split>
     </div>
