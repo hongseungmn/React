@@ -18,12 +18,11 @@ export default function FlightInfoCard({ data }) {
   
   const navigate = useNavigate();
   // 카드 클릭시 페이지 이동
-  function handleCardClick() {
-    console.log("Asdf");
-    navigate(`/departure/${data.fit}`);
+  function handleCardClick(data) {
+    navigate(`/departure/${data.flt}`);
   }
   return (
-    <div className="fic">
+    <div className="fic" onClick={() => handleCardClick(data)}>
       {/* Title Section */}
       <div className="fic-title" style={cardStyle}>
         <div className="fic-title-logo"></div>
