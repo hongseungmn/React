@@ -1,14 +1,16 @@
 import Header from "../../components/Header";
 import SearchBar from "../../components/SearchBar";
 import FlightInfoCard from "../../components/FlightInfoCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import departures_data from "../../utils/mocks/mockData";
-import { Link } from "react-router-dom";
 
 
 
 export default function Departure() {
-  const [flightInfoCards, setFlightInfoCards] = useState(departures_data);
+  const [flightInfoCards, setFlightInfoCards] = useState([]);
+  useEffect(() => {
+    setFlightInfoCards(departures_data);
+  }, []);
   return (
     <>
       {/* Header Section */}
